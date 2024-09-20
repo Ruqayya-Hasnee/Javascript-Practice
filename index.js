@@ -47,3 +47,22 @@ const book = {
 // 6. Add a new property to the book object and then delete an existing property.
 Object.defineProperty(book, "color", {value: "blue"});
 console.log(book);
+
+// Sets
+// 7. Create a Set from an array of numbers. Add a new number and remove an existing one.
+// 8. Given two Sets, find their intersection (common elements).
+
+// Functions
+// 9. Write a function that takes two numbers as parameters and returns their sum.
+function sumOfNum(a,b){
+    sum = a + b;
+    return sum;
+}
+console.log("Sum of numbers is:",sumOfNum(5,10));
+// 10. Create an arrow function that takes height, width as param and calculates the area of a rectangle.
+
+let rectangleArea = (height,Width) => {
+    let mul = height * Width;
+    return mul;
+}
+console.log("Area of rectangle is:",rectangleArea(12, 10));
