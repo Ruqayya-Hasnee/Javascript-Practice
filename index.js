@@ -23,9 +23,27 @@ favFruits.shift();
 console.log("Deletion of first fruit:",favFruits);
 
 // 4. Given an array of numbers, find the sum of all even numbers.
-let numbers = [13, 10, 2, 4, 8, 1, 9, 7];
-let sum = 0;
-for(let i of numbers ){   //using for-of loop
-    sum += i;
+function sumOfEvenNums(nums){
+    let sum = 0;
+    for(let i=0; i<nums.length; i++){
+        if(nums[i]%2 === 0){
+        sum += nums[i];
+    }
 }
-console.log(sum);
+return sum;
+}
+let nums = [10,5,6,8,7,11];
+console.log(sumOfEvenNums(nums));
+
+// Objects
+// 5. Create an object representing a book with properties like title, author, and year.
+const book = {
+    title: "How To Program",
+    author: "Deite & Deitel",
+    year: 1992,
+}
+     console.log(book)
+
+// 6. Add a new property to the book object and then delete an existing property.
+Object.defineProperty(book, "color", {value: "blue"});
+console.log(book);
