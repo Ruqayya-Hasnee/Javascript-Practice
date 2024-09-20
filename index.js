@@ -33,7 +33,7 @@ function sumOfEvenNums(nums){
 return sum;
 }
 let nums = [10,5,6,8,7,11];
-console.log(sumOfEvenNums(nums));
+console.log("Sum of even numbers  is:",sumOfEvenNums(nums));
 
 // Objects
 // 5. Create an object representing a book with properties like title, author, and year.
@@ -42,15 +42,31 @@ const book = {
     author: "Deite & Deitel",
     year: 1992,
 }
-     console.log(book)
+     console.log("Main array:",book)
 
 // 6. Add a new property to the book object and then delete an existing property.
-Object.defineProperty(book, "color", {value: "blue"});
-console.log(book);
+book.color =  'blue';
+console.log("Adding one more property:",book);
+delete book.year;
+console.log("Deletion of one property:",book);
 
 // Sets
 // 7. Create a Set from an array of numbers. Add a new number and remove an existing one.
+let numbers = [12, 36, 4, 15, 23];
+let newNum = new Set(numbers);
+console.log("Initial Array:",newNum);
+newNum.add(11);
+console.log("After Adding:",newNum);
+newNum.delete(15);
+console.log("After Deleting:",newNum);
 // 8. Given two Sets, find their intersection (common elements).
+function intersection(setA, setB) {
+  return new Set([...setA].filter(element => setB.has(element)));
+}
+const setA = new Set([14, 8, 31, 11]);
+const setB = new Set([1, 14, 15, 11]);
+const result = intersection(setA, setB);
+console.log(result);
 
 // Functions
 // 9. Write a function that takes two numbers as parameters and returns their sum.
@@ -60,9 +76,8 @@ function sumOfNum(a,b){
 }
 console.log("Sum of numbers is:",sumOfNum(5,10));
 // 10. Create an arrow function that takes height, width as param and calculates the area of a rectangle.
-
 let rectangleArea = (height,Width) => {
     let mul = height * Width;
     return mul;
 }
-console.log("Area of rectangle is:",rectangleArea(12, 10));
+console.log("Area of rectangle is:",rectangleArea(12,10));
