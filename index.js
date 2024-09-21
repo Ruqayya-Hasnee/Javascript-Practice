@@ -131,3 +131,16 @@ let std = {
 }
 let enteries =Object.entries(std);
 console.log(enteries);
+
+// Set Methods
+// 17. Use Set.has() to check if a Set contains a specific value.
+let set = new Set([7, 6, 3]);
+let val = set.has(7);
+console.log(val);
+
+// 18. Use Set.size to get the number of elements in a Set.
+let mySet = new Set([7, 6, 3]);
+let size = mySet.size;
+console.log(size);
+
+// 19. Convert a Set to an Array and vice versa.
