@@ -92,7 +92,7 @@ console.log("Original numbers are:",number);
 console.log("Square of original numbers using map is:",squareNum);
 
 // 12. Use filter() to create an array of even numbers from an array of mixed numbers.
-const mixNum = [25, 7, 8, 11, 17, 21];
+const mixNum = [25, 7, 6, 10, 17, 21];
 const evenNum = mixNum.filter((value) => {
     return value % 2 == 0;
 })
@@ -104,4 +104,30 @@ const digits = [10, 1, 4, 14, 21];
 const sumOfDigits = digits.reduce((value,sum) => {
 return value + sum;
 })
-console.log("Sum of numbers is:",sumOfDigits);
+console.log("Sum of numbers using reduce method is:",sumOfDigits);
+
+// Object Methods
+// 14. Use Object.keys() to get an array of all properties in an object.
+let student = {
+    name: "Ruqayya",
+    rollNo: 1145,
+    course: "javascript",
+}
+let keys =Object.keys(student);
+console.log(keys);
+// 15. Use Object.values() to get an array of all values in an object.
+let stud = {
+    name: "Ruqayya",
+    rollNo: 1145,
+    course: "javascript",
+}
+let values =Object.values(stud);
+console.log(values);
+// 16. Use Object.entries() to log each key-value pair of an object.
+let std = {
+    name: "Ruqayya",
+    rollNo: 1145,
+    course: "javascript",
+}
+let enteries =Object.entries(std);
+console.log(enteries);
