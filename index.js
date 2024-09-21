@@ -81,3 +81,27 @@ let rectangleArea = (height,Width) => {
     return mul;
 }
 console.log("Area of rectangle is:",rectangleArea(12,10));
+
+// Array Methods
+// 11. Use map() to create a new array with the squares of numbers from another array.
+const number = [2, 3, 5, 8, 7];
+const squareNum = number.map ((value) => {
+    return value*2;
+})
+console.log("Original numbers are:",number);
+console.log("Square of original numbers using map is:",squareNum);
+
+// 12. Use filter() to create an array of even numbers from an array of mixed numbers.
+const mixNum = [25, 7, 8, 11, 17, 21];
+const evenNum = mixNum.filter((value) => {
+    return value % 2 == 0;
+})
+console.log("Mixed numbers are:",mixNum);
+console.log("Even numbers using filter are:",evenNum);
+
+// 13. Use reduce() to find the sum of all numbers in an array.
+const digits = [10, 1, 4, 14, 21];
+const sumOfDigits = digits.reduce((value,sum) => {
+return value + sum;
+})
+console.log("Sum of numbers is:",sumOfDigits);
