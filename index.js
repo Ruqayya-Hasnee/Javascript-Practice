@@ -144,3 +144,45 @@ let size = mySet.size;
 console.log(size);
 
 // 19. Convert a Set to an Array and vice versa.
+let aSet = new Set([1, 2, 5, 7, 12, 21]);
+let anArray = [...aSet];
+console.log(anArray);
+
+let myArray = [1, 2, 5, 7, 12, 21];
+let makeSet = new Set(myArray);
+console.log(makeSet);
+
+// Advanced Functions
+// 20. Write a function that accepts any number of arguments and returns their sum.
+function myFunction(...num){
+ return num.reduce((sum, num) => {
+    return sum + num});
+}
+console.log(myFunction(1, 5, 1));
+console.log(myFunction(7, 6, 3));
+
+// 21. Create a function that returns another function (closure example).
+var a = 6;
+function outer(){
+function inner(){
+    console.log(a);
+}
+return inner();
+}
+var close = outer();
+console.log(close);
+// 22. Write a function that can be called with or without the 'new' keyword.
+function _student(){
+   return "I am a student of BSSE.";
+}
+console.log(_student());
+
+function person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+const person1 = new person("Ruqayya", 21);
+console.log(person1.name); 
+console.log(person1.age);  
+
